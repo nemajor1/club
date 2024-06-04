@@ -11,3 +11,17 @@ C:\Users\kolai\source\repos\pc_club\pc_club\obj\Debug\pc_club.exe
 C:\Users\kolai\source\repos\pc_club\pc_club\obj\Debug\pc_club.pdb
 C:\Users\kolai\source\repos\pc_club\pc_club\obj\Debug\pc_club.AuthForm.resources
 C:\Users\kolai\source\repos\pc_club\pc_club\obj\Debug\pc_club.RegisterForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\pc_club.exe.config
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\pc_club.exe
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\pc_club.pdb
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.csproj.AssemblyReference.cache
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.csproj.SuggestedBindingRedirects.cache
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.AuthForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.Form1.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.Properties.Resources.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.RegisterForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.csproj.GenerateResource.cache
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.csproj.CoreCompileInputs.cache
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.exe
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.pdb
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.MainForm.resources

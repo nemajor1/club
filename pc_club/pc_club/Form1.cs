@@ -7,18 +7,29 @@ namespace pc_club
     {
         AuthForm authForm = new AuthForm();
         RegisterForm registerForm = new RegisterForm();
+        MainForm mainForm = new MainForm();
         public Form1()
         {
             InitializeComponent();
-            authForm.RegisterButtonClicked += AuthForm_RegisterButtonClicked;
-            registerForm.RegisterButtonPressed += RegisterForm_RegisterButtonClicked;
+            authForm.RegisterButtonPressed += AuthForm_RegisterButtonPressed;
+            authForm.EnterButtonPressed += AuthForm_EnterButtonPressed;
+            registerForm.RegisterButtonPressed += RegisterForm_RegisterButtonPressed;
+            registerForm.ReturnButtonPressed += RegisterForm_ReturnButtonPressed;
             FormActive(authForm);
         }
-        private void AuthForm_RegisterButtonClicked(object sender, EventArgs e)
+        private void AuthForm_RegisterButtonPressed(object sender, EventArgs e)
         {
             FormActive(registerForm);
         }
-        private void RegisterForm_RegisterButtonClicked(object sender, EventArgs e)
+        private void AuthForm_EnterButtonPressed(object sender, EventArgs e)
+        {
+            FormActive(mainForm);
+        }
+        private void RegisterForm_RegisterButtonPressed(object sender, EventArgs e)
+        {
+            FormActive(authForm);
+        }
+        private void RegisterForm_ReturnButtonPressed(object sender, EventArgs e)
         {
             FormActive(authForm);
         }
