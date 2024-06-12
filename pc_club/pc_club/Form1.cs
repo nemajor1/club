@@ -7,7 +7,7 @@ namespace pc_club
     public partial class Form1 : Form
     {
         const string connect = "Host=localhost;Port=5432;Username=postgres;Password=ex27bvw821dl;Database=computer_club";
-        private NpgsqlConnection con;
+        public static NpgsqlConnection con;
         private string msg;
 
         AuthForm authForm = new AuthForm();
