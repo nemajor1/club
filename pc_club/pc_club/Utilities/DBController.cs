@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-public static class DBController
+public class DBController
 {
     const string msgConnect = "Host=localhost;Port=5432;Username=postgres;Password=ex27bvw821dl;Database=computer_club";
 
@@ -13,7 +13,7 @@ public static class DBController
     {
         con.Open();
     }
-    private static void ExecuteNonQuery(string query, params NpgsqlParameter[] parameters)
+    private void ExecuteNonQuery(string query, params NpgsqlParameter[] parameters)
     {
         using (var command = new NpgsqlCommand(query, (NpgsqlConnection)con))
         {
@@ -24,7 +24,7 @@ public static class DBController
             command.ExecuteNonQuery();
         }
     }
-    private static DataTable ExecuteQuery(string query, params NpgsqlParameter[] parameters)
+    private DataTable ExecuteQuery(string query, params NpgsqlParameter[] parameters)
     {
         using (var command = new NpgsqlCommand(query, con))
         {
@@ -41,7 +41,7 @@ public static class DBController
             }
         }
     }
-    public static bool UserRegistration(string firstName, string lastName, string username, string password)
+    public bool UserRegistration(string firstName, string lastName, string username, string password)
     {
         string msg = @"INSERT INTO clients (first_name, last_name, balance, username, password, status, role)
                          VALUES (@first_name, @last_name, '0', @username, @password, 'white', 'user')";
@@ -64,7 +64,7 @@ public static class DBController
             return false;
         }
     }
-    public static bool CheckDataUser(string username, string password)
+    public bool CheckDataUser(string username, string password)
     {
         string msg = "SELECT COUNT(*) FROM clients WHERE username = @username AND password = @password";
 
@@ -88,7 +88,7 @@ public static class DBController
             return false;
         }
     }
-    public static void LoadClientData(Label[] labels )
+    public void LoadClientData(Label[] labels )
     {
         string msg = "SELECT client_id, first_name, last_name, balance, username, status, role FROM clients";
 
@@ -125,7 +125,7 @@ public static class DBController
             MessageBox.Show($"Ошибка при загрузке данных клиентов: {e.Message}");
         }
     }
-    public static void AddBalance(int clientId, int amount)
+    public void AddBalance(int clientId, int amount)
     {
         string query = "UPDATE clients SET balance = balance + @amount WHERE client_id = @clientId";
 

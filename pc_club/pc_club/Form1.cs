@@ -8,6 +8,7 @@ namespace pc_club
         AuthForm authForm = new AuthForm();
         RegisterForm registerForm = new RegisterForm();
         MainForm mainForm = new MainForm();
+        DBController dbController = new DBController();
         public Form1()
         {
             DBController.Connection();
@@ -24,14 +25,14 @@ namespace pc_club
         }
         private void AuthForm_EnterButtonPressed(object sender, EventArgs e)
         {
-            if (DBController.CheckDataUser(authForm.textBox1.Text, authForm.textBox2.Text))
+            if (dbController.CheckDataUser(authForm.textBox1.Text, authForm.textBox2.Text))
             {
                 ActivatedForm.ShowFormInPanel(mainForm, panel1);
             }
         }
         private void RegisterForm_RegisterButtonPressed(object sender, EventArgs e)
         {
-            if (DBController.UserRegistration(registerForm.textBox1.Text, registerForm.textBox2.Text, registerForm.textBox3.Text, registerForm.textBox4.Text))
+            if (dbController.UserRegistration(registerForm.textBox1.Text, registerForm.textBox2.Text, registerForm.textBox3.Text, registerForm.textBox4.Text))
             {
                 ActivatedForm.ShowFormInPanel(authForm, panel1);
             }
