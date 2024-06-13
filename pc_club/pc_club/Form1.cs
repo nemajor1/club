@@ -9,6 +9,7 @@ namespace pc_club
         RegisterForm registerForm = new RegisterForm();
         MainForm mainForm = new MainForm();
         DBController dbController = new DBController();
+        ActivatedForm activatedForm = new ActivatedForm();
         public Form1()
         {
             DBController.Connection();
@@ -17,29 +18,29 @@ namespace pc_club
             authForm.EnterButtonPressed += AuthForm_EnterButtonPressed;
             registerForm.RegisterButtonPressed += RegisterForm_RegisterButtonPressed;
             registerForm.ReturnButtonPressed += RegisterForm_ReturnButtonPressed;
-            ActivatedForm.ShowFormInPanel(authForm, panel1);
+            activatedForm.ShowFormInPanel(authForm, panel1);
         }
         private void AuthForm_RegisterButtonPressed(object sender, EventArgs e)
         {
-            ActivatedForm.ShowFormInPanel(registerForm, panel1);
+            activatedForm.ShowFormInPanel(registerForm, panel1);
         }
         private void AuthForm_EnterButtonPressed(object sender, EventArgs e)
         {
             if (dbController.CheckDataUser(authForm.textBox1.Text, authForm.textBox2.Text))
             {
-                ActivatedForm.ShowFormInPanel(mainForm, panel1);
+                activatedForm.ShowFormInPanel(mainForm, panel1);
             }
         }
         private void RegisterForm_RegisterButtonPressed(object sender, EventArgs e)
         {
             if (dbController.UserRegistration(registerForm.textBox1.Text, registerForm.textBox2.Text, registerForm.textBox3.Text, registerForm.textBox4.Text))
             {
-                ActivatedForm.ShowFormInPanel(authForm, panel1);
+                activatedForm.ShowFormInPanel(authForm, panel1);
             }
         }
         private void RegisterForm_ReturnButtonPressed(object sender, EventArgs e)
         {
-            ActivatedForm.ShowFormInPanel(authForm, panel1);
+            activatedForm.ShowFormInPanel(authForm, panel1);
         }
     }
 }

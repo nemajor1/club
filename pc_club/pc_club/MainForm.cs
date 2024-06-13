@@ -6,7 +6,7 @@ namespace pc_club
     {
         ClientsForm clients = new ClientsForm();
         DBController dbController = new DBController();
-   
+        ActivatedForm activatedForm = new ActivatedForm();
         public MainForm()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace pc_club
         {
             Label[] labels = { clients.label2, clients.label3, clients.label4, clients.label5, clients.label6, clients.label7, clients.label8 };
             dbController.LoadClientData(labels);
-            ActivatedForm.ShowFormInPanel(clients, panel1);
+            activatedForm.ShowFormInPanel(clients, panel1);
         }
     }
 }
