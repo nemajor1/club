@@ -5,15 +5,17 @@ namespace pc_club
     public partial class MainForm : Form
     {
         ClientsForm clients = new ClientsForm();
+        DBController dbController = new DBController();
+        ActivatedForm activatedForm = new ActivatedForm();
         public MainForm()
         {
             InitializeComponent();
         }
         private void button2_Click(object sender, System.EventArgs e)
         {
-            DBController.LoadClientData(clients.label2, clients.label3,
-                clients.label4, clients.label5, clients.label6, clients.label7, clients.label8);
-            ActivatedForm.ShowFormInPanel(clients, panel1);
+            Label[] labels = { clients.label2, clients.label3, clients.label4, clients.label5, clients.label6, clients.label7, clients.label8 };
+            dbController.LoadClientData(labels);
+            activatedForm.ShowFormInPanel(clients, panel1);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace pc_club
 {
     public partial class ClientsForm : Form
     {
+        DBController dbController = new DBController();
         public ClientsForm()
         {
             InitializeComponent();
@@ -13,7 +14,7 @@ namespace pc_club
         {
             int id = Convert.ToInt32(textBox1.Text);
             int balance = Convert.ToInt32(textBox2.Text);
-            DBController.AddBalance(id, balance);
+            dbController.AddBalance(id, balance);
         }
     }
 }

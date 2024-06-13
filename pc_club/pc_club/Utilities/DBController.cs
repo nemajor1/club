@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-public static class DBController
+public class DBController
 {
     const string msgConnect = "Host=localhost;Port=5432;Username=postgres;Password=ex27bvw821dl;Database=computer_club";
 
@@ -13,7 +13,7 @@ public static class DBController
     {
         con.Open();
     }
-    private static void ExecuteNonQuery(string query, params NpgsqlParameter[] parameters)
+    private void ExecuteNonQuery(string query, params NpgsqlParameter[] parameters)
     {
         using (var command = new NpgsqlCommand(query, (NpgsqlConnection)con))
         {
@@ -24,7 +24,7 @@ public static class DBController
             command.ExecuteNonQuery();
         }
     }
-    private static DataTable ExecuteQuery(string query, params NpgsqlParameter[] parameters)
+    private DataTable ExecuteQuery(string query, params NpgsqlParameter[] parameters)
     {
         using (var command = new NpgsqlCommand(query, con))
         {
@@ -41,7 +41,7 @@ public static class DBController
             }
         }
     }
-    public static bool UserRegistration(string firstName, string lastName, string username, string password)
+    public bool UserRegistration(string firstName, string lastName, string username, string password)
     {
         string msg = @"INSERT INTO clients (first_name, last_name, balance, username, password, status, role)
                          VALUES (@first_name, @last_name, '0', @username, @password, 'white', 'user')";
@@ -64,39 +64,40 @@ public static class DBController
             return false;
         }
     }
-    public static bool CheckDataUser(string username, string password)
+    public bool CheckDataUser(string username, string password)
     {
         string msg = "SELECT COUNT(*) FROM clients WHERE username = @username AND password = @password";
 
         var parametrs = new[]
         {
-            new NpgsqlParameter("@username", username),
-            new NpgsqlParameter("@password", password)
-        };
+        new NpgsqlParameter("@username", username),
+        new NpgsqlParameter("@password", password)
+    };
+
         try
         {
-            DataTable result = ExecuteQuery(msg, parametrs);
-            return result.Rows.Count > 0;
+            // Выполняем запрос и получаем одно целое число
+            int count = Convert.ToInt32(ExecuteQuery(msg, parametrs).Rows[0][0]);
+
+            // Если count больше 0, значит, пользователь с такими данными существует
+            return count > 0;
         }
         catch (Exception e)
         {
-            MessageBox.Show($"Error during login check: {e.Message}");
+            MessageBox.Show("Неверное имя или пароль");
             return false;
         }
     }
-    public static void LoadClientData(Label _id, Label _firstname, Label _lastname, Label _balance, Label _username, Label _status, Label _role)
+    public void LoadClientData(Label[] labels )
     {
         string msg = "SELECT client_id, first_name, last_name, balance, username, status, role FROM clients";
 
         try
         {
-            _id.Text = "";
-            _firstname.Text = "";
-            _lastname.Text = "";
-            _balance.Text = "";
-            _username.Text = "";
-            _status.Text = "";
-            _role.Text = "";
+            foreach (var label in labels)
+            {
+                label.Text = "";
+            }
 
             DataTable result = ExecuteQuery(msg);
 
@@ -110,13 +111,13 @@ public static class DBController
                 string status = row["status"].ToString();
                 string role = row["role"].ToString();
 
-                _id.Text += clientId + "\n";
-                _firstname.Text += firstName + "\n";
-                _lastname.Text += lastName + "\n";
-                _balance.Text += balance + "\n";
-                _username.Text += username + "\n";
-                _status.Text += status + "\n";
-                _role.Text += role + "\n";
+                labels[0].Text += clientId + "\n";
+                labels[1].Text += firstName + "\n";
+                labels[2].Text += lastName + "\n";
+                labels[3].Text += balance + "\n";
+                labels[4].Text += username + "\n";
+                labels[5].Text += status + "\n";
+                labels[6].Text += role + "\n";
             }
         }
         catch (Exception e)
@@ -124,7 +125,7 @@ public static class DBController
             MessageBox.Show($"Ошибка при загрузке данных клиентов: {e.Message}");
         }
     }
-    public static void AddBalance(int clientId, int amount)
+    public void AddBalance(int clientId, int amount)
     {
         string query = "UPDATE clients SET balance = balance + @amount WHERE client_id = @clientId";
 

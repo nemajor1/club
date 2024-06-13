@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-public static class ActivatedForm
+public class ActivatedForm
 {
-    public static void ShowFormInPanel(Form form, Panel panel)
+    public void ShowFormInPanel(Form form, Panel panel)
     {
         panel.Controls.Clear();
 
