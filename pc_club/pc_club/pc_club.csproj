@@ -144,6 +144,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarForm.Designer.cs">
+      <DependentUpon>BarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,8 +190,14 @@
     </Compile>
     <Compile Include="Utilities\ActivatedForm.cs" />
     <Compile Include="Utilities\DBController.cs" />
+    <EmbeddedResource Include="AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarForm.resx">
+      <DependentUpon>BarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>

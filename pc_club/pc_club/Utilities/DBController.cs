@@ -127,7 +127,7 @@ public class DBController
     }
     public void AddBalance(int clientId, int amount)
     {
-        string query = "UPDATE clients SET balance = balance + @amount WHERE client_id = @clientId";
+        string msg = "UPDATE clients SET balance = balance + @amount WHERE client_id = @clientId";
 
         var parameters = new[]
         {
@@ -137,12 +137,33 @@ public class DBController
 
         try
         {
-            ExecuteNonQuery(query, parameters);
+            ExecuteNonQuery(msg, parameters);
             MessageBox.Show("Баланс успешно пополнен.");
         }
         catch (Exception e)
         {
             MessageBox.Show($"Ошибка при пополнении баланса: {e.Message}");
+        }
+    }
+    public void AddProduct(string item_name, int item_price)
+    {
+        string msg = @"INSERT INTO bar (item_name, item_price, quantity)
+                         VALUES (@item_name, @item_price, '0')";
+
+        var parametrs = new[]
+        {
+            new NpgsqlParameter("@item_name", item_name),
+            new NpgsqlParameter("@item_price", item_price)
+        };
+
+        if (!String.IsNullOrWhiteSpace(item_name) && !String.IsNullOrWhiteSpace(item_price.ToString()))
+        {
+            ExecuteNonQuery(msg, parametrs);
+            MessageBox.Show($"добавлен {item_name}");
+        }
+        else
+        {
+            MessageBox.Show("Заполните пустые поля");
         }
     }
 }

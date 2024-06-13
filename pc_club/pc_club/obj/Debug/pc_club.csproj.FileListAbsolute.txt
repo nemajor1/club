@@ -87,3 +87,5 @@ C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Microsoft.Extensions.
 C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.ClientsForm.resources
 C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.BarForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.AddProductForm.resources
