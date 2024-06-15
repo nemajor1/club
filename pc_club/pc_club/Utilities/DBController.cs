@@ -125,6 +125,37 @@ public class DBController
             MessageBox.Show($"Ошибка при загрузке данных клиентов: {e.Message}");
         }
     }
+    public void LoadProductData(Label[] labels)
+    {
+        string msg = "SELECT item_id, item_name, item_price, quantity FROM bar";
+
+        try
+        {
+            foreach (var label in labels)
+            {
+                label.Text = "";
+            }
+
+            DataTable result = ExecuteQuery(msg);
+
+            foreach (DataRow row in result.Rows)
+            {
+                int itemId = Convert.ToInt32(row["item_id"]);
+                string itemName = row["item_name"].ToString();
+                int itemPrice = Convert.ToInt32(row["item_price"]);
+                int quantity = Convert.ToInt32(row["quantity"]);
+
+                labels[0].Text += itemId + "\n";
+                labels[1].Text += itemName + "\n";
+                labels[2].Text += itemPrice + "\n";
+                labels[3].Text += quantity + "\n";
+            }
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show($"Ошибка при загрузке данных бара: {e.Message}");
+        }
+    }
     public void AddBalance(int clientId, int amount)
     {
         string msg = "UPDATE clients SET balance = balance + @amount WHERE client_id = @clientId";
@@ -139,6 +170,26 @@ public class DBController
         {
             ExecuteNonQuery(msg, parameters);
             MessageBox.Show("Баланс успешно пополнен.");
+        }
+        catch (Exception e)
+        {
+            MessageBox.Show($"Ошибка при пополнении баланса: {e.Message}");
+        }
+    }
+    public void AddQuantityProduct(int itemId, int quantity)
+    {
+        string msg = "UPDATE bar SET quantity = quantity + @quantity WHERE item_id = @itemId";
+
+        var parameters = new[]
+        {
+        new NpgsqlParameter("@quantity", quantity),
+        new NpgsqlParameter("@itemId", itemId)
+        };
+
+        try
+        {
+            ExecuteNonQuery(msg, parameters);
+            MessageBox.Show("Бар успешно пополнен.");
         }
         catch (Exception e)
         {

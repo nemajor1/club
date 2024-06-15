@@ -22,6 +22,8 @@ namespace pc_club
 
         private void button1_Click(object sender, System.EventArgs e)
         {
+            Label[] labels = { barForm.label2, barForm.label3, barForm.label4, barForm.label5 };
+            dbController.LoadProductData(labels);
             activatedForm.ShowFormInPanel(barForm, panel1);
         }
     }
