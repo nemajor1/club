@@ -9,7 +9,7 @@ public class DBController
 
     public static NpgsqlConnection con = new NpgsqlConnection(msgConnect);
 
-    public static void Connection()
+    public void Connection()
     {
         con.Open();
     }
@@ -53,16 +53,18 @@ public class DBController
             new NpgsqlParameter("@username", username),
             new NpgsqlParameter("@password", password)
         };
-        if (!String.IsNullOrWhiteSpace(firstName) && !String.IsNullOrWhiteSpace(lastName) && !String.IsNullOrWhiteSpace(username) && !String.IsNullOrWhiteSpace(password))
-        {
-            ExecuteNonQuery(msg, parametrs);
-            return true;
-        }
-        else
-        {
-            MessageBox.Show("Заполните пустые поля");
-            return false;
-        }
+        //if (!String.IsNullOrWhiteSpace(firstName) && !String.IsNullOrWhiteSpace(lastName) && !String.IsNullOrWhiteSpace(username) && !String.IsNullOrWhiteSpace(password))
+        //{
+        //    ExecuteNonQuery(msg, parametrs);
+        //    return true;
+        //}
+        //else
+        //{
+        //    MessageBox.Show("Заполните пустые поля");
+        //    return false;
+        //}
+        ExecuteNonQuery(msg, parametrs);
+        return true;
     }
     public bool CheckDataUser(string username, string password)
     {

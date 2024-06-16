@@ -32,5 +32,14 @@ namespace pc_club
         {
             activatedForm.ShowFormInPanel(endToEndTestForm, panel1);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DBControllerTests dBControllerTests = new DBControllerTests();
+            dBControllerTests.Setup();
+            dBControllerTests.UserRegistration_ValidInput_ReturnsTrue();
+            dBControllerTests.UserRegistration_NullParameters_ReturnsFalse();
+            dBControllerTests.UserRegistration_MissingFields_ReturnsFalse();
+        }
     }
 }
