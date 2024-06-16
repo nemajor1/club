@@ -87,3 +87,10 @@ C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Microsoft.Extensions.
 C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.ClientsForm.resources
 C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.BarForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.AddProductForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.UserRegFormTest.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndTestForm.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.UserCheckDataFormTest.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.LoadClientDataFormTest.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.LoadBarDataFormTest.resources
