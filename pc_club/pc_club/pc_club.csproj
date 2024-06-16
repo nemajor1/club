@@ -162,6 +162,36 @@
     <Compile Include="ClientsForm.Designer.cs">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndToEndForms\LoadBarDataFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndToEndForms\LoadBarDataFormTest.Designer.cs">
+      <DependentUpon>LoadBarDataFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndToEndForms\LoadClientDataFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndToEndForms\LoadClientDataFormTest.Designer.cs">
+      <DependentUpon>LoadClientDataFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndToEndForms\UserCheckDataFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndToEndForms\UserCheckDataFormTest.Designer.cs">
+      <DependentUpon>UserCheckDataFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndToEndForms\UserRegFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndToEndForms\UserRegFormTest.Designer.cs">
+      <DependentUpon>UserRegFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndToEndTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndToEndTestForm.Designer.cs">
+      <DependentUpon>EndToEndTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +231,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndToEndForms\LoadBarDataFormTest.resx">
+      <DependentUpon>LoadBarDataFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndToEndForms\LoadClientDataFormTest.resx">
+      <DependentUpon>LoadClientDataFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndToEndForms\UserCheckDataFormTest.resx">
+      <DependentUpon>UserCheckDataFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndToEndForms\UserRegFormTest.resx">
+      <DependentUpon>UserRegFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndToEndTestForm.resx">
+      <DependentUpon>EndToEndTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

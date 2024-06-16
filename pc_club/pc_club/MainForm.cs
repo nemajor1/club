@@ -9,6 +9,7 @@ namespace pc_club
         DBController dbController = new DBController();
         ActivatedForm activatedForm = new ActivatedForm();
         BarForm barForm = new BarForm();
+        EndToEndTestForm endToEndTestForm = new EndToEndTestForm();
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace pc_club
             Label[] labels = { barForm.label2, barForm.label3, barForm.label4, barForm.label5 };
             dbController.LoadProductData(labels);
             activatedForm.ShowFormInPanel(barForm, panel1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            activatedForm.ShowFormInPanel(endToEndTestForm, panel1);
         }
     }
 }
