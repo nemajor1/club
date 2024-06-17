@@ -9,7 +9,7 @@ public class DBController
 
     public static NpgsqlConnection con = new NpgsqlConnection(msgConnect);
 
-    public static void Connection()
+    public void Connection()
     {
         con.Open();
     }

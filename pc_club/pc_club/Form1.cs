@@ -12,7 +12,7 @@ namespace pc_club
         ActivatedForm activatedForm = new ActivatedForm();
         public Form1()
         {
-            DBController.Connection();
+            dbController.Connection();
             InitializeComponent();
             authForm.RegisterButtonPressed += AuthForm_RegisterButtonPressed;
             authForm.EnterButtonPressed += AuthForm_EnterButtonPressed;

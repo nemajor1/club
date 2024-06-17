@@ -94,3 +94,13 @@ C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndTestF
 C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.UserCheckDataFormTest.resources
 C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.LoadClientDataFormTest.resources
 C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.EndToEndForms.LoadBarDataFormTest.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Castle.Core.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Moq.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\nunit.framework.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\nunit.framework.legacy.dll
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Castle.Core.xml
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\Moq.xml
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\nunit.framework.xml
+C:\Users\kolai\source\repos\club\pc_club\pc_club\bin\Debug\nunit.framework.legacy.xml
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.ModuleForms.ModuleRegFormTest.resources
+C:\Users\kolai\source\repos\club\pc_club\pc_club\obj\Debug\pc_club.ORMForm.resources
