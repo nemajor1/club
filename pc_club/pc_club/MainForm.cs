@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using pc_club.ModuleForms;
 
 namespace pc_club
 {
@@ -10,6 +11,7 @@ namespace pc_club
         ActivatedForm activatedForm = new ActivatedForm();
         BarForm barForm = new BarForm();
         EndToEndTestForm endToEndTestForm = new EndToEndTestForm();
+        ModuleRegFormTest moduleRegFormTest = new ModuleRegFormTest();
         public MainForm()
         {
             InitializeComponent();
@@ -35,11 +37,7 @@ namespace pc_club
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DBControllerTests dBControllerTests = new DBControllerTests();
-            dBControllerTests.Setup();
-            dBControllerTests.UserRegistration_ValidInput_ReturnsTrue();
-            dBControllerTests.UserRegistration_NullParameters_ReturnsFalse();
-            dBControllerTests.UserRegistration_MissingFields_ReturnsFalse();
+            activatedForm.ShowFormInPanel(moduleRegFormTest, panel1);
         }
     }
 }
