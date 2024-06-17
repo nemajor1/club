@@ -231,6 +231,12 @@
     <Compile Include="ModuleForms\ModuleRegFormTest.Designer.cs">
       <DependentUpon>ModuleRegFormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORMForm.Designer.cs">
+      <DependentUpon>ORMForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -241,6 +247,7 @@
     </Compile>
     <Compile Include="Utilities\ActivatedForm.cs" />
     <Compile Include="Utilities\DBController.cs" />
+    <Compile Include="Utilities\DBControllerORM.cs" />
     <EmbeddedResource Include="AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuleForms\ModuleRegFormTest.resx">
       <DependentUpon>ModuleRegFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORMForm.resx">
+      <DependentUpon>ORMForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

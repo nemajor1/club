@@ -12,6 +12,7 @@ namespace pc_club
         BarForm barForm = new BarForm();
         EndToEndTestForm endToEndTestForm = new EndToEndTestForm();
         ModuleRegFormTest moduleRegFormTest = new ModuleRegFormTest();
+        ORMForm oRMForm = new ORMForm();
         public MainForm()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace pc_club
         private void button4_Click(object sender, EventArgs e)
         {
             activatedForm.ShowFormInPanel(moduleRegFormTest, panel1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            activatedForm.ShowFormInPanel(oRMForm, panel1);
         }
     }
 }
